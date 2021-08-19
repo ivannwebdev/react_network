@@ -1,0 +1,28 @@
+ul{
+    list-style: none;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    font-size: 24px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.trecks{
+    border-right: 1px solid black;
+}
+.singers{
+    
+}
+
+.song{
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.item{
+    padding: 10px 10px 10px 40px;
+    border-bottom: 1px solid black;
+    margin-left: -40px;
+}

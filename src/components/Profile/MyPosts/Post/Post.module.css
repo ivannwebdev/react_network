@@ -1,0 +1,26 @@
+.item {
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 17px;
+    margin-left: 5px;
+}
+
+.wrapper{
+    background-color: burlywood;
+    display: flex;
+    padding: 10px;
+}
+
+.avatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.count{
+    font-size: 18px;
+    margin-top: 27px;
+    margin-left: 10px;
+    color:red;
+    font-family: Arial, Helvetica, sans-serif;
+}

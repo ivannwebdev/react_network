@@ -1,0 +1,47 @@
+.wrapper{
+    background-color: cadetblue;
+}
+
+.item{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px 15px 0 15px;
+    margin-left: 40px;
+    font-weight: 500;
+}
+
+.addPostWrapper{
+    padding: 15px;
+}
+
+.postTextWrap{
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.postText{
+    width: 250px;
+    height: 75px;
+    resize: none;
+    font-size: inherit;
+    background-color:gainsboro;
+    border: 1px solid black;
+}
+
+.button{
+    width: 150px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.button:active{
+    background-color:darkgray;
+}
+
+
+
+

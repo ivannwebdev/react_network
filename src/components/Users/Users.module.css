@@ -1,0 +1,37 @@
+.wrapper{
+    font-size: 22px;
+    padding: 7px;
+}
+
+.wrapper span:last-child{
+    color:maroon;
+}
+
+.wrapper span{
+    padding: 4px;
+}
+
+.image{
+    height: 110px;
+    padding: 10px;
+}
+
+button{
+    width: 120px;
+    height: 30px;
+    margin: 10px;
+}
+
+.pages{
+    font-size: 22px;
+    padding: 10px;
+}
+
+.pages span{
+    padding: 8px;
+}
+
+.active{
+    font-weight: 600;
+    font-size: 25px;
+}

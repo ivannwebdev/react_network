@@ -1,0 +1,32 @@
+.nav{
+    grid-area: n;
+    background-color:maroon;
+
+}
+
+.nav div{
+    margin-top: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.nav div:first-child{
+    margin-top: 50px;
+}
+
+
+.item a{
+    color: floralwhite;
+    text-decoration: none;
+}
+
+.item a.activeLink{
+    color:royalblue;
+}
+
+.nav div:last-child{
+    padding-bottom: 100px;
+}
+
+
