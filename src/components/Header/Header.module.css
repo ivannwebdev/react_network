@@ -7,3 +7,10 @@
     width: 330px;
     margin-top: 4px;
 }
+
+.login{
+    color:white;
+    float: right;
+    font-size: 23px;
+    padding: 5px;
+}

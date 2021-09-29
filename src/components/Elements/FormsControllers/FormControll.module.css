@@ -1,0 +1,38 @@
+.form.error textarea{
+    border: 3px solid red;
+}
+.form.error textarea:focus{
+    outline: none;
+}
+.form.error input{
+    border: 3px solid red;
+}
+
+.form.error input:focus{
+    outline: none;
+}
+
+.form{
+    padding: 5px;
+}
+
+.input{
+    font-size: 17px;
+    width: 230px;
+    height: 25px;
+}
+
+.textarea{
+    font-size: 17px;
+    width: 230px;
+    height: 25px;
+}
+
+.formError{
+    border: 2px solid red;
+    background-color: crimson;
+    padding: 5px;
+    width: 180px;
+    height: 40px;
+    font-size: 19px;
+}

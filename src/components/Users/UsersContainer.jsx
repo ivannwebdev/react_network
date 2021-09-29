@@ -1,42 +1,32 @@
-import * as axios from 'axios'
 import { connect } from 'react-redux'
-import { follow, unFollow, setUsers, setCurrentPage, setTotalUsersCount, toggleIsFetching } from './../../Redux/users-reducer'
+import {setCurrentPage, toggleIsFollowing } from './../../Redux/users-reducer'
 import React from 'react';
 import Users from './Users';
 import Preloader from './../Elements/Preloader';
+import { getUsers, follow, unFollow } from './../../Redux/users-reducer';
+import { compose } from 'redux';
+import { AuthRedirect } from './../../HOC/AuthRedirect';
+
 
 class UsersContainer extends React.Component {
 
     componentDidMount() {
 
-        this.props.toggleIsFetching(true)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.pageSize}&page=${this.props.currentPage}`).then( response => {
-                this.props.toggleIsFetching(false)
-                this.props.setUsers(response.data.items)
-                this.props.setTotalUsersCount (response.data.totalCount)
-            }
-        )
+        this.props.getUsers(this.props.currentPage, this.props.pageSize)
         
     }
 
     onPageChange = (number) => {
         this.props.setCurrentPage(number)
-        this.props.toggleIsFetching(true)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.pageSize}&page=${number}`).then( response => {
-                this.props.toggleIsFetching(false)
-                this.props.setUsers(response.data.items)
-            }
-        )
+        this.props.getUsers(number, this.props.pageSize)
     }
     
     render(){
 
-        let unFollow = this.props.unFollow
-        let follow = this.props.follow
         return <>
             {this.props.isFetching && <Preloader/>}
             <Users 
-            onPageChange= {this.onPageChange} unFollow= {unFollow} follow= {follow} users= {this.props.users} currentPage= {this.props.currentPage} pageSize= {this.props.pageSize} totalUsersCount= {this.props.totalUsersCount}
+            onPageChange= {this.onPageChange} users= {this.props.users} currentPage= {this.props.currentPage} pageSize= {this.props.pageSize} totalUsersCount= {this.props.totalUsersCount}  followingProgress= {this.props.followingProgress} follow= {this.props.follow} unFollow= {this.props.unFollow}
             />
         </>
     
@@ -50,16 +40,14 @@ const mapStateToProps = (state) => {
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching
+        isFetching: state.usersPage.isFetching,
+        followingProgress: state.usersPage.followingProgress
     }
 }
 
-export default connect(mapStateToProps, {
-    follow,
-    unFollow,
-    setUsers,
-    setCurrentPage,
-    setTotalUsersCount,
-    toggleIsFetching
+export default compose(
+    AuthRedirect,
+    connect(mapStateToProps, {setCurrentPage, toggleIsFollowing, getUsers, follow, unFollow})
 
-}) (UsersContainer)
+)(UsersContainer)
+
