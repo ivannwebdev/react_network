@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ivannwebdev/react_network/static/css/main.080f73e9.chunk.css",
+    "main.js": "/ivannwebdev/react_network/static/js/main.1f03dba1.chunk.js",
+    "main.js.map": "/ivannwebdev/react_network/static/js/main.1f03dba1.chunk.js.map",
+    "runtime-main.js": "/ivannwebdev/react_network/static/js/runtime-main.1c38152b.js",
+    "runtime-main.js.map": "/ivannwebdev/react_network/static/js/runtime-main.1c38152b.js.map",
+    "static/js/2.4aa02d32.chunk.js": "/ivannwebdev/react_network/static/js/2.4aa02d32.chunk.js",
+    "static/js/2.4aa02d32.chunk.js.map": "/ivannwebdev/react_network/static/js/2.4aa02d32.chunk.js.map",
+    "index.html": "/ivannwebdev/react_network/index.html",
+    "static/css/main.080f73e9.chunk.css.map": "/ivannwebdev/react_network/static/css/main.080f73e9.chunk.css.map",
+    "static/js/2.4aa02d32.chunk.js.LICENSE.txt": "/ivannwebdev/react_network/static/js/2.4aa02d32.chunk.js.LICENSE.txt",
+    "static/media/reaload4.dbd59916.svg": "/ivannwebdev/react_network/static/media/reaload4.dbd59916.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c38152b.js",
+    "static/js/2.4aa02d32.chunk.js",
+    "static/css/main.080f73e9.chunk.css",
+    "static/js/main.1f03dba1.chunk.js"
+  ]
+}
