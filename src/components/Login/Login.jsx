@@ -37,7 +37,7 @@ const Login = (props) => {
 
 
     const onSubmit = (formData) => {
-       props.login(formData.login, formData.password, formData.rememberMe)
+       props.login(formData.email, formData.password, formData.rememberMe)
     }
 
     return <div className={styles.wrapper}>
