@@ -6,7 +6,6 @@ let initialState ={
         { id: 2, name: 'Olga' },
         { id: 3, name: 'Svetlana' },
         { id: 4, name: 'Victor' },
-        {id: 5, name: 'Glorya'}
     ],
     dialogsMessages: [
         { id: 1, message: 'Hi, how are you?' },

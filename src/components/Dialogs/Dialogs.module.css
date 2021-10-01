@@ -10,7 +10,11 @@
 
 .dialogs_items .item {
     padding: 10px;
-    border-bottom: 1px solid black;
+    text-decoration: none;
+}
+
+.item{
+    text-decoration: none;
 }
 
 .dialogs_messages{
@@ -19,6 +23,5 @@
 
 .dialogs_messages .message{
     padding: 10px;
-    border-bottom: 1px solid black;
     padding-left: 300px;
 }

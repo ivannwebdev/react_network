@@ -1,8 +1,13 @@
 import React from "react"
+import { Redirect } from "react-router"
 import styles from "./Music.module.css"
+import { connect } from 'react-redux';
 
 
-export default function Music(props) {
+ function Music(props) {
+
+	if (!props.isAuth) return <Redirect to='/login' />
+
 	let trecks = props.state.music.songs.map((treck, i) => (
 		<li className={styles.song}>
 			{i + 1}. &#9836; {treck.song}
@@ -24,3 +29,11 @@ export default function Music(props) {
 		</div>
 	)
 }
+
+const mapStateToProps = (state) => {
+	return {
+		isAuth: state.auth.isAuth
+	}
+}
+
+export default connect(mapStateToProps, null)(Music)

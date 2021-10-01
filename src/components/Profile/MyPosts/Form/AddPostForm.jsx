@@ -3,6 +3,7 @@ import { Field, reduxForm } from 'redux-form'
 import { required, maxLengthCreator } from '../../../../Validators/validator'
 import { Textarea } from '../../../Elements/FormsControllers/FormControll';
 import { noGap } from './../../../../Validators/validator';
+import { Button } from 'react-bootstrap';
 
 const maxLength15 = maxLengthCreator(15)
 
@@ -14,7 +15,7 @@ const Form  = (props) =>{
         </div>
 
         <div>
-            <button>Add post</button>
+            <Button style= {{width: 160,backgroundColor:'lightskyblue',color: 'black', height: 45}} size= 'lg' onClick= {props.handleSubmit}>Add post</Button>
         </div>
     </form>
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Users.module.css'
 import photo from './../../photos/photo.png'
 import { NavLink } from 'react-router-dom'
+import { Button } from 'react-bootstrap';
 
 let Users = (props) => {
 
@@ -29,15 +30,15 @@ let Users = (props) => {
                         </span>
                     <div>
                         {el.followed ? 
-                        <button disabled= {props.followingProgress.some(id => id === el.id)} onClick={() => {
+                            <Button style={{ backgroundColor: 'darkcyan', width: 90, marginLeft: 6, height: 35, color: 'black' }} disabled= {props.followingProgress.some(id => id === el.id)} onClick={() => {
                             props.unFollow(el)
                         }
                     }>Unfollow
-                    </button> 
-                            : <button disabled={props.followingProgress.some(id => id === el.id)} onClick= {() => {
+                    </Button> 
+                            : <Button style={{ backgroundColor: 'darkcyan', width: 90, marginLeft: 6, height: 35, color: 'black' }} disabled={props.followingProgress.some(id => id === el.id)} onClick= {() => {
                                 props.follow(el)
                 }
-                    }>Follow</button>}
+                    }>Follow</Button>}
                         </div>
                     </div>
                 )}

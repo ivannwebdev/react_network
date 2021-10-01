@@ -8,7 +8,7 @@ export const Textarea = ({ input, meta, ...props }) => {
         <div>
             <textarea className= {styles.textarea} {...input} {...props} />
         </div>
-        {isError && <span>{meta.error}</span>}
+        {isError && <span>{meta.error} !</span>}
     </div>
 }
 
@@ -17,9 +17,9 @@ export const Input = ({ input, meta, ...props }) => {
     return <div className={styles.form + ' ' + (isError ? styles.error : '')}>
 
         <div>
-            <input className= {styles.input} {...input} {...props} />
+            <input variant= 'contained' className= {styles.input} {...input} {...props} />
         </div>
-        {isError && <span>{meta.error}</span>}
+        {isError && <span className= {styles.error}>{meta.error} !</span>}
     </div>
 }
 
