@@ -15,7 +15,7 @@ const Form  = (props) =>{
         </div>
 
         <div>
-            <Button style= {{width: 160,backgroundColor:'lightskyblue',color: 'black', height: 45}} size= 'lg' onClick= {props.handleSubmit}>Add post</Button>
+            <Button style= {{width: 130,backgroundColor:'dimgrey',color: 'white', height: 40}} onClick= {props.handleSubmit}>Add post</Button>
         </div>
     </form>
 }

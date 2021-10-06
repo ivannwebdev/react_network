@@ -6,7 +6,7 @@ const Settings = (props) => {
     if (!props.isAuth) return <Redirect to='/login' />
     return(
         <div>
-            <h1>Your settings</h1>
+            <h3 style= {{marginLeft: 500}}>Your settings</h3>
         </div>
     )
 }

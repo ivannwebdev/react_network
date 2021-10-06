@@ -1,12 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import styles from'./Navbar.module.css'
 
-export default function Navbar() {
+function Navbar(props) {
+  console.log(props)
     return(
-      <nav  className= {styles.nav}>
+      <nav className={styles.nav}>
         <div className= {styles.item}>
-          <NavLink to='/profile' activeClassName= {styles.activeLink}>Profile</NavLink>
+          <NavLink className= {styles.navlink} to='/profile' activeClassName= {styles.activeLink}>Profile</NavLink>
         </div>
         <div className= {styles.item}>
           <NavLink to='/dialogs' activeClassName= {styles.activeLink}>Massages</NavLink>
@@ -18,7 +19,7 @@ export default function Navbar() {
           <NavLink to= '/about' activeClassName= {styles.activeLink}>About me</NavLink>
         </div>
         <div className= {styles.item}>
-          <NavLink to= '/users' activeClassName= {styles.activeLink}>Users</NavLink>
+          <NavLink className= {props?.location?.pathname === '/users' ? styles.users : '' } to= '/users' activeClassName= {styles.activeLink}>Users</NavLink>
         </div>
         <div className={styles.item}>
           <NavLink to='/settings' activeClassName={styles.activeLink}>Settings</NavLink>
@@ -26,3 +27,5 @@ export default function Navbar() {
       </nav>
     )
 }
+
+export default withRouter(Navbar)

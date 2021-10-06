@@ -11,6 +11,8 @@
 .login{
     color:white;
     float: right;
-    font-size: 23px;
+    font-size: 22px;
     padding: 5px;
+    margin-right: 25px;
+    margin-top: 20px;
 }

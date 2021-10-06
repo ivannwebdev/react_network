@@ -3,9 +3,10 @@ ul{
 }
 
 .wrapper{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 2fr 7fr;
-    font-size: 24px;
+    font-size: 18px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
@@ -25,4 +26,5 @@ ul{
     padding: 10px 10px 10px 40px;
     border-bottom: 1px solid black;
     margin-left: -40px;
+    width: 400px;
 }

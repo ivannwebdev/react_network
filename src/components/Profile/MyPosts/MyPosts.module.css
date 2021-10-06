@@ -3,9 +3,9 @@
 }
 
 .item{
-    font-size: 25px;
+    font-size: 19px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 15px 15px 0 15px;
+    padding: 15px 15px 0 0px;
     margin-left: 40px;
     font-weight: 500;
 }
@@ -15,7 +15,7 @@
 }
 
 .postTextWrap{
-    font-size: 19px;
+    font-size: 17px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }

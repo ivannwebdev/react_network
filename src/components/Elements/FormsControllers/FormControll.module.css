@@ -19,16 +19,16 @@
 }
 
 .input{
-    font-size: 18px;
-    width: 250px;
-    height: 32px;
+    font-size: 17px;
+    width: 200px;
+    height: 25px;
     border-radius: 3px;
 }
 
 .textarea{
-    font-size: 19px;
-    width: 270px;
-    height: 60px;
+    font-size: 17px;
+    width: 200px;
+    height: 50px;
     margin-left: -105px;
 }
 
@@ -46,11 +46,10 @@
 }
 
 .error{
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 17px;
     color:black;
 }
 .rememberMe{
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
 }

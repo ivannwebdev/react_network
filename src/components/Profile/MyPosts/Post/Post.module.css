@@ -1,5 +1,5 @@
 .item {
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 17px;
     margin-left: 5px;
@@ -18,9 +18,9 @@
 }
 
 .count{
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 27px;
     margin-left: 10px;
-    color:red;
+    color: brown;
     font-family: Arial, Helvetica, sans-serif;
 }

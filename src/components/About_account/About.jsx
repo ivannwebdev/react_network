@@ -8,7 +8,7 @@ const About = (props) => {
     return(
         <div className={styles.wrapper}>
             <div className={styles.about_me}>
-                <h1>Acount description</h1>
+                <h2>Acount description</h2>
                 Hello. I would like to tell you abot me.
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut alias natus laudantium maxime, soluta iusto error magni libero ipsam nobis maiores necessitatibus asperiores dolorum? Event!
             </div>

@@ -15,13 +15,13 @@ const maxLength30 = maxLengthCreator(30)
 const LoginForm = (props) => {
     return <form onSubmit= {props.handleSubmit} className= {styles.form}>
         <div>
-            <Field validate= {[required, noGap, maxLength30]} name= 'email' placeholder= 'email' component= {Input}/>
+            <Field style={{ width: 180, height: 30, fontSize: 15 }} validate= {[required, noGap, maxLength30]} name= 'email' placeholder= 'email' component= {Input}/>
         </div>
             <div>
-                <Field validate={[required, noGap, maxLength30]} type='password' name='password' placeholder='password' component={Input} />
+                <Field style= {{width: 180, height: 28}} validate={[required, noGap, maxLength30]} type='password' name='password' placeholder='password' component={Input} />
             </div>
             <div>
-            <div style={{ display: 'inline', float: 'left', fontSize: 17, fontWeight: 500, marginLeft: 105, marginRight: -80, marginTop: 13}}>
+            <div style={{ display: 'inline', float: 'left', fontSize: 15, marginLeft: 105, marginRight: -80, marginTop: 9}}>
                          Remember me
                     </div>
                     <div>
@@ -33,7 +33,7 @@ const LoginForm = (props) => {
                 {props.error}
             </div>}
         <div>
-           <Button style= {{marginLeft: 110, width: 170, height: 42 }} size= 'lg' onClick= {props.handleSubmit}>Login</Button>
+           <Button style= {{marginLeft: 110, width: 120, marginTop: 10, height: 37 }} onClick= {props.handleSubmit}>Login</Button>
         </div>
     </form>
     
@@ -51,7 +51,7 @@ const Login = (props) => {
     }
 
     return <div className={styles.wrapper}>
-            <h1 style= {{marginLeft: 105}}>Login</h1>
+            <h2 style= {{marginLeft: 105}}>Login</h2>
             <LoginReduxForm onSubmit={onSubmit} />
 
         </div>

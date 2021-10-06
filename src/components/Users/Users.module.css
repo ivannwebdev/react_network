@@ -1,5 +1,5 @@
 .wrapper{
-    font-size: 22px;
+    font-size: 17px;
     padding: 7px;
 }
 
@@ -16,14 +16,8 @@
     padding: 10px;
 }
 
-button{
-    width: 120px;
-    height: 30px;
-    margin: 10px;
-}
-
 .pages{
-    font-size: 22px;
+    font-size: 20px;
     padding: 10px;
 }
 
