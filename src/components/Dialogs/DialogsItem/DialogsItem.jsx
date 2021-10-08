@@ -6,7 +6,7 @@ export default function DialogsItem(props) {
     let path = '/dialogs/' + props.id
     return(
         <div className={styles.item}>
-            <NavLink style= {{textDecoration: 'none', color: 'black'}} to={path}>{props.name}</NavLink>
+            <NavLink  to={path}>{props.name}</NavLink>
         </div>
     )
 }

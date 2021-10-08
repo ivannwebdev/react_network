@@ -3,7 +3,9 @@ import { connect } from 'react-redux'
 
 let mapStateToProps = (state) => {
     return{
-        state: state
+        state: state,
+        darkMode: state.settings.darkMode,
+        isAuth: state.auth.isAuth
     }
 }
 

@@ -16,7 +16,7 @@ export default function MyPosts(props) {
 
 
   return(
-      <div className= {styles.wrapper}>
+      <div className= {props.darkMode? styles.darkWrapper :styles.wrapper}>
         <div className= {styles.item}>My Posts</div>
         <div className={styles.addPostWrapper}>
         

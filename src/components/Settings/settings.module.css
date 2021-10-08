@@ -1,0 +1,14 @@
+.darkWrapper{
+    background-color: black;
+    padding-bottom: 550px;
+    color: whitesmoke;
+}
+
+.lightWrapper{
+    background-color: lightcyan;
+    padding-bottom: 550px;
+    color:black;
+}
+
+
+

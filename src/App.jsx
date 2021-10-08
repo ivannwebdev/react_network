@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
-import './App.css'
+import styles from './App.module.css'
 import { Route } from 'react-router'
 import About from './components/About_account/About'
 import DialogsContainer from './components/Dialogs/DialogsContainer'
@@ -23,7 +23,7 @@ class App extends React.Component {
   }
 
   render() {
-    return <div className='wrapper'>
+    return <div className= {this.props.darkMode? styles.darkWrapper: styles.lightWrapper}>
       <HeaderContainer />
       <Navbar />
       <div className='app-wrapper'>
@@ -41,4 +41,10 @@ class App extends React.Component {
   }
 }
 
-export default compose(withRouter, connect(null, { auth }))  (App)
+const mapStateToProps = (state) => (
+  {
+    darkMode: state.settings.darkMode
+  }
+)
+
+export default compose(withRouter, connect(mapStateToProps, { auth }))  (App)

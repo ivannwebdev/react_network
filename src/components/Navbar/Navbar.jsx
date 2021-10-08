@@ -1,11 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { NavLink, withRouter } from 'react-router-dom';
+import { compose } from 'redux';
 import styles from'./Navbar.module.css'
 
 function Navbar(props) {
   console.log(props)
     return(
-      <nav className={styles.nav}>
+      <nav className={props.darkMode? styles.darkNav : styles.nav}>
         <div className= {styles.item}>
           <NavLink className= {styles.navlink} to='/profile' activeClassName= {styles.activeLink}>Profile</NavLink>
         </div>
@@ -28,4 +30,11 @@ function Navbar(props) {
     )
 }
 
-export default withRouter(Navbar)
+const mapStateToProps = (state) => ({
+  darkMode: state.settings.darkMode
+})
+
+export default compose(
+  connect(mapStateToProps, null),
+  withRouter
+)(Navbar)

@@ -10,6 +10,29 @@ ul{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+.darkWrapper{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.darkWrapper .trecks{
+    border-right: 1px solid whitesmoke;
+}
+
+.darkWrapper .item{
+    padding: 10px 10px 10px 40px;
+    border-bottom: 1px solid whitesmoke;
+    margin-left: -40px;
+    width: 400px;
+}
+
+.darkWrapper .song{
+    padding: 10px;
+    border-bottom: 1px solid whitesmoke;
+}
 .trecks{
     border-right: 1px solid black;
 }

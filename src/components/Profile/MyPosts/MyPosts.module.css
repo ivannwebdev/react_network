@@ -1,5 +1,9 @@
 .wrapper{
-    background-color: cadetblue;
+    background-color: lightcyan;
+}
+
+.darkWrapper{
+    background-color: black;
 }
 
 .item{
@@ -18,15 +22,6 @@
     font-size: 17px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-}
-
-.postText{
-    width: 250px;
-    height: 75px;
-    resize: none;
-    font-size: inherit;
-    background-color:gainsboro;
-    border: 1px solid black;
 }
 
 .button{

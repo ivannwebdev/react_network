@@ -1,23 +1,37 @@
+.darkWrapper{
+    background-color: black;
+}
+
+.darkWrapper .wrapper span:last-child{
+    color:wheat;
+}
+
+.active{
+    font-size: 22px;
+    font-weight: 500;
+}
+
 .wrapper{
     font-size: 17px;
     padding: 7px;
 }
 
 .wrapper span:last-child{
-    color:maroon;
+    color: brown;
 }
 
 .wrapper span{
-    padding: 4px;
+    padding-right: 10px;
 }
 
 .image{
     height: 110px;
     padding: 10px;
+    padding-bottom: 0;
 }
 
 .pages{
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
 }
 
@@ -25,7 +39,63 @@
     padding: 8px;
 }
 
-.active{
-    font-weight: 600;
-    font-size: 25px;
+.followLight{
+    background-color: lightgray;
+    width: 70px;
+    margin-left: 6px;
+    height: 25px;
+    font-size: 14px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.unfollowLight{
+    background-color: lightgray;
+    font-size: 14px;
+    width: 75px;
+    margin-left: 6px;
+    height: 25px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.followLight:hover{
+    box-shadow: 0 1px 6px grey;
+}
+
+.unfollowLight:hover{
+    box-shadow: 0 1px 6px grey;
+}
+
+.followDark{
+    background-color: whitesmoke;
+    width: 70px;
+    margin-left: 6px;
+    height: 25px;
+    font-size: 14px;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 3px;
+    
+}
+
+.followDark:hover{
+    box-shadow: 0 1px 6px white;
+}
+
+.unfollowDark:hover{
+    box-shadow: 0 1px 6px white;
+}
+
+.unfollowDark{
+    background-color: whitesmoke;
+    font-size: 14px;
+    width: 75px;
+    margin-left: 6px;
+    height: 25px;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 3px;
 }

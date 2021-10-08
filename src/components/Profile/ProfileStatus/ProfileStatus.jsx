@@ -38,7 +38,7 @@ class ProfileStatus extends React.Component {
     
     render(){return <div className= {styles.wrapper}>
         {!this.state.editMode ? 
-            this.props.status && <div onDoubleClick={this.EditModeOn}>Status: <span className={styles.status}>{this.props.status ? this.props.status: 'no status' }</span> </div>
+            this.state.status && <div onDoubleClick={this.EditModeOn}>Status: <span className={styles.status}>{this.state.status ? this.state.status: 'no status' }</span> </div>
             : <StatusForm value= {this.state.stutus} onSubmit= {this.onSubmit}/>
         }
     </div>}

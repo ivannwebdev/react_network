@@ -19,7 +19,7 @@ import { connect } from 'react-redux';
 	))
 
 	return (
-		<div className={styles.wrapper}>
+		<div className={props.darkMode? styles.darkWrapper :styles.wrapper}>
 			<div className={styles.trecks}>
 				<ul>{trecks}</ul>
 			</div>
@@ -30,10 +30,4 @@ import { connect } from 'react-redux';
 	)
 }
 
-const mapStateToProps = (state) => {
-	return {
-		isAuth: state.auth.isAuth
-	}
-}
-
-export default connect(mapStateToProps, null)(Music)
+export default Music

@@ -1,44 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Users.module.css'
 import photo from './../../photos/image.jpg'
 import { NavLink } from 'react-router-dom'
-import { Button } from 'react-bootstrap';
+import { connect } from 'react-redux'
+import Paginator from '../Elements/Paginator/Paginator'
 
 let Users = (props) => {
 
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
-
-    let pages = []
-
-    for(let i = 1; i<=pagesCount; i++){
-        pages.push(i)
-    }
-
-    return <div>
+    return <div className= {props.darkMode? styles.darkWrapper: styles.lightWrapper}>
             <div className= {styles.pages}>
-                {pages.map(el => {
-                    return <span onClick={() => { props.onPageChange(el)}} className={el === props.currentPage ? styles.active : ''}>{el}</span>
-                })}
+                <Paginator pageSize= {props.pageSize} totalItemsCount= {props.totalItemsCount} currentPage= {props.currentPage} onChange= {props.onPageChange} portionSize= {props.portionSize}/>
             </div>
             <div>
                 {props.users.map(el => <div key= {el.id + Math.random()}>
                     <NavLink to= {`/profile/ ${el.id}`}><img className={styles.image} src={el.photos.small != null ? el.photos.small : photo} /></NavLink>
-                        <span className= {styles.wrapper}>
+                        <div className= {styles.wrapper}>
                             <span>{el.name}</span>
-                            <span>{el.surname}</span>,
-                            <span>{'el.location.country'}</span>
-                        </span>
+                        
+                            <span>id {el.id}</span>
+                        </div>
+                        
                     <div>
                         {el.followed ? 
-                            <Button style={{ backgroundColor: 'dimgrey', fontSize: 14, width: 75, marginLeft: 6, height: 30, color: 'white' }} disabled= {props.followingProgress.some(id => id === el.id)} onClick={() => {
+                            <button className= {props.darkMode? styles.unfollowDark :styles.unfollowLight}  disabled= {props.followingProgress.some(id => id === el.id)} onClick={() => {
                             props.unFollow(el)
                         }
                     }>unfollow
-                    </Button> 
-                            : <Button style={{ backgroundColor: 'dimgrey', width: 70, marginLeft: 6, height: 30, color:'white', fontSize: 14 }} disabled={props.followingProgress.some(id => id === el.id)} onClick= {() => {
+                    </button> 
+                            : <button className= {props.darkMode? styles.followDark :styles.followLight} disabled={props.followingProgress.some(id => id === el.id)} onClick= {() => {
                                 props.follow(el)
                 }
-                    }>follow</Button>}
+                    }>follow</button>}
                         </div>
                     </div>
                 )}
@@ -46,4 +38,8 @@ let Users = (props) => {
         </div>
 }
 
-export default Users
+const mapStateToProps = (state) => ({
+    darkMode: state.settings.darkMode
+})
+
+export default connect(mapStateToProps, null)(Users)

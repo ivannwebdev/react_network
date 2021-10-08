@@ -6,9 +6,23 @@
 }
 
 .wrapper{
-    background-color: burlywood;
+    background-color:cornflowerblue;
     display: flex;
     padding: 10px;
+}
+
+.darkWrapper{
+    background-color:darkslategray;
+    display: flex;
+    padding: 10px;
+}
+
+.darkWrapper .count{
+    font-size: 17px;
+    margin-top: 27px;
+    margin-left: 10px;
+    color:coral;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .avatar{
@@ -21,6 +35,6 @@
     font-size: 17px;
     margin-top: 27px;
     margin-left: 10px;
-    color: brown;
+    color:maroon;
     font-family: Arial, Helvetica, sans-serif;
 }
